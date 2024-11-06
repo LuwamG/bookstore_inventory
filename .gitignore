@@ -11,3 +11,4 @@
 
 # Ignore .vs folder
 .vs/
+*bookstore_inventory.cpp

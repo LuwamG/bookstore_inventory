@@ -6,12 +6,16 @@
 using namespace std;
 
 int main() {
-    vector<Book_information> inventory; // Inventory of books
-    Store_information store; // Store information
+    vector<Book_information> inventory; 
+    Store_information store; 
 
     // Set up store information
-    store.name = "Local Bookstore";
-    store.address = "123 Book St, Booktown";
+    cout << "Enter store name: ";
+    getline(cin,store.name) ;
+    cin.ignore();
+    cout << "Enter store address: ";
+    getline(cin,store.address);
+    cin.ignore();
 
     // Display store information
     cout << "Welcome to " << store.name << " located at " << store.address << endl;
@@ -19,30 +23,30 @@ int main() {
     // Sample books to add
     Book_information book1;
     cout << "Enter book title: ";
-    cin >> book1.title;
+    getline(cin, book1.title);
     cin.ignore();
     cout << "Enter author's first name: ";
-    cin >> book1.author.firstname ;
+    getline(cin, book1.author.firstname);
     cin.ignore();
     cout << "Enter author's last name: ";
-    cin >>book1.author.lastname;
+    getline(cin,book1.author.lastname);
     cin.ignore();
-    cout <<"Enter publish date: ";
-    cin >> book1.publishdate.day;
+    cout <<"Enter publish date(day/month/year): ";
+    cin >> book1.publishdate.day >> book1.publishdate.month >> book1.publishdate.year;
     cin.ignore();
 
     Book_information book2;
     cout << "Enter book2 title: ";
-    cin >> book2.title;
+    getline(cin, book2.title);
     cin.ignore();
     cout << "Enter author's first name: ";
-    cin >> book2.author.firstname;
+    getline(cin, book2.author.firstname);
     cin.ignore();
     cout << "Enter author's last name: ";
-    cin >> book2.author.lastname;
+    getline(cin, book2.author.lastname);
     cin.ignore();
-    cout << "Enter publish date: ";
-    cin >> book2.publishdate.day;
+    cout << "Enter publish date(day/month/year): ";
+    cin >> book2.publishdate.day >> book2.publishdate.month >> book2.publishdate.year;
     cin.ignore();
 
 
